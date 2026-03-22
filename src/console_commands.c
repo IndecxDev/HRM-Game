@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 
 #include "../include/settings.h"
 #include "../include/interpreter.h"
@@ -235,7 +236,7 @@ void runCmd(int levelId, Level *levels, bool debug) {
     }
     fclose(programFile);
 
-    int *input = nullptr; 
+    int *input = NULL; 
     int *output = (int*) malloc(sizeof(int) * MAX_OUTPUT_SIZE); 
     int inputCount = 0, outputCount = 0;
     if (interpret(reference, levels, levelId, false, refLineCount, true, &result, &input, &output, &inputCount, &outputCount) != ERR_NONE) {

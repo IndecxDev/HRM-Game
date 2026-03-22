@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <stdbool.h>
 
 #include "../include/settings.h"
 #include "../include/console_commands.h"
@@ -16,7 +17,7 @@ void getUserInput(char *input) {
 }
 
 int main() {
-    srand(time(nullptr)); // Random number initialization
+    srand(time(NULL)); // Random number initialization
 
     Level *levels = (Level*) malloc(sizeof(*levels) * MAX_LEVELS);
     loadData(levels);

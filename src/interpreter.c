@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h>
 
 #include "../include/settings.h"
 #include "../include/input_generator.h"
@@ -123,11 +124,11 @@ ErrorType interpret(ProgramLine* program,
     int refCommandCount = 0;
 
     if (reference) getInput(levelId, input, inputCount);
-    if (!reference && *output == nullptr) {
+    if (!reference && *output == NULL) {
         printf("\033[1;31mReference program failed to give output.\033[0m\n");
         return ERR_GENERAL;
     }
-    if (reference && *output == nullptr) {
+    if (reference && *output == NULL) {
         printf("\033[1;31mNeed to allocate shit.\033[0m\n");
     }
     resetMemory(levels);

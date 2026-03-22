@@ -91,19 +91,18 @@ void getReferenceProgram(char** program, int levelId){
     case 9:
         strcpy(*program,
         "INPUT\n"
-        "COPY TO 2\n"
+        "COPY TO 3\n"
         "COPY FROM 1\n"
-        "COPY TO 3\n"
+        "COPY TO 2\n"
         "OUTPUT\n"
-        "COPY FROM 3\n"
-        "SUB 2\n"
+        "COPY FROM 2\n"
+        "SUB 3\n"
         "JUMPZ 1\n"
-        "COPY FROM 3\n"
+        "COPY FROM 2\n"
         "ADD 1\n"
-        "COPY TO 3\n"
+        "COPY TO 2\n"
         "OUTPUT\n"
-        "COPY FROM 3\n"
-        "JUMP 7\n");
+        "JUMP 6\n");
         break;
     default:
         strcpy(*program, "\n");
